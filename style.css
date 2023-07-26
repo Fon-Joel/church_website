@@ -1,0 +1,255 @@
+.navbar {
+    background:linear-gradient(to right, purple 30%, rgb(179, 179, 173));
+    color:yellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    top:0;
+    left:0;
+    width:100%;
+    position:fixed;
+    z-index:3;
+  }
+  .menu-items a.active{
+    color:red;
+    border:solid white 1px;
+  }
+  
+   /* Media query for screens wider than a certain width (e.g., phones) */
+   @media (max-width: 767px) {
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+      .nav-logo{
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        bottom:0;
+        background:yellow;
+        background-image: url("chariots-logo.png");
+        top:0;
+        left:0;
+        position:absolute;
+        width:10vw;
+      }
+      .church-name {
+        font-weight: bold;
+        padding-left:9vw;
+        font-size:large;
+      }
+    .nav-logo img {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 100%;
+      max-height: 100%;
+      }
+      
+    .menu-items{
+      display:none;
+      background:linear-gradient(to top, purple 40%, rgb(142, 138, 138));
+     
+    
+    }
+    .menu-items > ul > li {
+        display: flex;
+        padding:2vw;
+      }
+      .menu-items > ul {
+        margin:0;
+        padding:5vw;
+       
+      }
+      .menu-items a {
+        color:yellow;
+        text-decoration: none;
+      }
+      .menu-items a:hover{
+        color:red;
+        font-style: italic;
+      }
+      .dropdown{
+        display:inline-block;
+        position:relative;
+      }
+    .dropdown-menu-toggle {
+      align-items: center;
+      display:absolute;
+    }
+    
+    .dropdown-toggle-icon {
+      margin-right: 5vw;
+      cursor: pointer;
+      padding-right:2vw;
+      color:yellow;
+    }
+    
+    .dropdown-menu li {
+        margin-bottom: 0.1vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding:1vw;
+      }
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: max-content; /* Adjust the width as needed */
+        top:30%;
+        right:100%;
+        z-index: 1;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        background:linear-gradient(to top, purple 50%, rgb(179, 179, 173));
+      }  
+      .dropdown-toggle::after {
+        content: "\25BE"; /* Unicode down arrow character */
+        margin-left: 0.2vw;}
+        .menu-items.open {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          width: fit-content;
+          padding: 0;
+          margin: 0;
+          z-index: 1; /* Add this line */
+        }
+      
+  }
+
+   /* Media query for screens wider than a certain width (e.g., tablets and desktops) */
+  @media (min-width: 768px) {
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+      }
+      .nav-logo{
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        bottom:0;
+        background:yellow;
+        background-image:center, url('chariots-logo.png');
+        top:0;
+        left:0;
+        position:absolute;
+        width:6vw;
+      }
+      .nav-logo img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .church-name {
+        font-weight: bold;
+        padding-left:6vw;
+        font-size:x-large;
+      }
+      
+    .dropdown-menu-toggle {
+      display: none;
+    }
+    .dropdown {
+        position:relative;
+      }
+      
+      .dropdown-toggle::after {
+        content: "\25BE"; /* Unicode down arrow character */
+        margin-left: 0.5vw;
+      }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        padding: 1vw;
+        max-height: 2.8em; /* Adjust the max-height as needed */
+        overflow: hidden;
+      }
+      .dropdown:hover .dropdown-menu {
+        display: block;
+        background:linear-gradient(to right, purple 50%, rgb(179, 179, 173));
+      }  
+      .dropdown-menu li {
+        margin-bottom: 0.05vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .menu-items a:hover {
+        color: red;
+        font-style: italic;
+      }
+      
+      .menu-items > ul {
+        display: flex;
+        padding-left:0.5vw;
+        padding-right:2vw;
+      }
+      .menu-items > ul > li {
+        display: inline-block;
+        margin-left: 2vw;
+        padding:0.1vw;
+        margin-right:1vw;
+      }
+      
+      .menu-items ul li:first-child {
+        margin-left: 0;
+      }
+      
+      .menu-items a {
+        color:yellow;
+        text-decoration: none;
+      }
+     
+ }
+ .admin-form{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%, -50%);
+ display:flex;
+ padding:10px;
+ background:rgb(0,70,120);
+ width:80%;
+ height:80%;
+ text-align:center;
+ flex-direction:column;
+}
+.admin-form h2{
+color:yellow;
+font-size:80px;
+}
+.admin-form form{
+height:80%;
+align-items:center;
+justify-content:center;
+
+}
+
+.admin-form input{
+border-radius:20%;
+font:;
+}
+.admin-form label{
+color:yellow;
+} 
+.admin-form p{
+color:red;
+}
+
+
+
+ 
+  

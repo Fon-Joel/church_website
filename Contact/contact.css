@@ -1,0 +1,121 @@
+h1 {
+    margin: 0;
+}
+
+
+section {
+    margin-bottom: 20px;
+    padding:10px;
+}
+.note{
+  color:red;
+  font-weight:bold;
+font-style:italic;
+}
+
+h2 {
+    margin-top: 0;
+}
+form{
+  background:#f3f3f3;
+  padding:5px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: purple;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.fa-whatsapp{
+color: green;
+}
+.fa-facebook{
+  color: blue;
+}
+.fa-envelope{
+  color:red;
+}
+.contact-us{
+  background:#f3f3f3;
+  padding:5px;
+}
+.contact-container{
+diplay:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.contact-container i{
+padding:5px;
+}
+.contact-container p{
+font-weight:bold;
+font-style:italic;
+}
+.contact-container a{
+  color:blue;
+  text-decoration:none;
+}
+@media(min-width:768px){
+  header {
+    background-color: purple;
+    color: yellow;
+    padding: 20px;
+    text-align: center;
+    margin-top:90px;
+}
+}
+@media(max-width:768px){
+  header {
+   background-color: purple;
+    color: yellow;
+    padding: 20px;
+    text-align: center;
+    margin-top:50px;
+}
+}
+.display-prayers{
+  background:#f3f3f3;
+  padding:5px;
+  display:none;
+ 
+}
+.display-prayers div{
+  border:solid 1px purple;
+  padding: 10px;
+  margin: 10px;
+}
+.display-prayers div h3{
+  color:purple;
+}
+
+.remove_leader button{
+  background:red;
+  color:white;
+  border:black solid 2px;
+}
+.open{
+  display:block;
+}
+#prayerRequest{
+margin-bottom:5px;
+background:blue;
+color:white;
+}

@@ -1,0 +1,141 @@
+body{
+    overflow-x:hidden;
+    }
+.announcement{
+  margin-top:50px;
+  margin-bottom:5px;
+  padding:5px;
+  background-color:#f3f3f3;
+  width:100%;
+}
+table{
+  border:solid black 2px;
+  padding: 5px;
+  column-width:fit-content;
+  width:90vw;
+  background:#e6e6e6;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    border-style:double;
+    background:white;
+  }
+  th{
+    background:grey;
+    color:white;
+  }
+.current_events{
+  margin-top:5px;
+  padding:5px;
+  border-bottom:solid red 2px;
+  
+}
+.add_leader button{
+  color:white;
+  background:blue;
+}
+@media (min-width: 768px){
+.add_leader{
+   display:flex;
+   justify-content:center;
+   align-content:center;
+   padding: 4px;
+   margin:4px;
+   background:grey;
+}
+.announcement{
+  margin-top:70px;
+  margin-bottom:5px;
+  padding:5px;
+  background-color:#f3f3f3;
+  
+}
+.event img{
+ width:40vw;
+  heigth:20vw;
+  display:flex;
+  self-align:center;
+}
+.events img {
+  height:20vw;
+  width:30vw;
+  object-fit: cover;
+  object-position:top center;
+}
+}
+ @media(max-width:767px){
+ .add_leader{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-content:center;
+    padding: 4px;
+    margin:4px;
+    background:grey;
+ }
+ .event img{
+  width:60vw;
+  heigth:50vw;
+  display:flex;
+  self-align:center;
+}
+.events img {
+  height:40vw;
+  width:60vw;
+  object-fit: cover;
+  object-position:top center;
+}
+}
+.event-container{
+   overflow-x: scroll;
+   display:flex;
+ }
+.event{
+   margin:2px;
+   background:#f3f3f3;
+   padding:10px;
+   display:grid;
+ }
+ .events {
+  border:purple solid 1px;
+  background:#f3f3f3;
+  padding:10px;
+  margin-right:10px;
+  
+}
+  .events p{
+  font-size:16px;
+   
+  }
+  .event p:last-child{
+   color:red;
+   }
+  .events h3{
+  font-size:24px;
+  white-space:nowrap;
+    
+  }
+ .events p:last-child{
+   color:red;
+   white-space:nowrap;
+   
+ }
+.remove_leader button{
+  color:white;
+  background:red;
+}
+upcoming_events{
+  margin-top:5px;
+  padding:5px;
+  border-bottom:solid red 2px;
+  
+}
+footer{
+  background:linear-gradient(to right, purple 50%, rgb(179, 179, 173));
+  padding: 10px;
+  color:yellow;
+  text-align: center;
+  display:flex;
+  flex-direction:column;
+}
