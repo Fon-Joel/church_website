@@ -15,7 +15,7 @@ pipeline {
                              archiveArtifacts artifacts: 'church_website/website1.zip'
 
       }
-              stage('build2) {
+              stage('build2') {
                     steps {
                            echo 'Running the next automation'
                            sh '.gradlew build2 --no-daemon'
