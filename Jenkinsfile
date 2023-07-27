@@ -11,15 +11,12 @@ pipeline {
                             echo 'Running build automation'
 
                              sh './gradlew build --no-daemon'
+                             sh './gradlew build2 --no-daemon'
 
                              archiveArtifacts artifacts: 'church_website/website1.zip'
 
       }
-              stage('build2) {
-                    steps {
-                           echo 'Running the next automation'
-                           sh '.gradlew build2 --no-daemon'
-                    }
+             
 
 }
 
