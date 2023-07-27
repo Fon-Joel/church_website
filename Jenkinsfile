@@ -16,7 +16,7 @@ pipeline {
 
       }
               stage('build2) {
-                    ste[s {
+                    steps {
                            echo 'Running the next automation'
                            sh '.gradlew build2 --no-daemon'
                     }
