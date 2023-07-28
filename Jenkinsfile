@@ -11,8 +11,9 @@ pipeline {
                             echo 'Running build automation'
 
                              sh './gradlew build --no-daemon'
+                             sh './gradlew build2 --no-daemon'
 
-                             archiveArtifacts artifacts: 'trinitech-web/website1.zip'
+                             archiveArtifacts artifacts: 'church_website/CGC.zip'
 
       }
 
@@ -21,7 +22,4 @@ pipeline {
 
 
 }
-
-
-
 }
