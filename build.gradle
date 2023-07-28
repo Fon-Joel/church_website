@@ -12,18 +12,18 @@ task build(type: Zip) {
    include 'About/**'
 }
 destinationDirectory=(file('church'))
-archiveFileName='CGC'
+archiveBaseName='CGC'
 }
 task build1(type: Zip) {
       from '/var/www/church_website/public/About/images'
       destinationDirectory=(file('church'))
-      archiveFileName='CGC_full'
+      archiveBaseName='CGC_full'
 }
 
      
 task build2(type: Zip) {
       from '/var/www/church_website/public'
       destinationDirectory=(file('church'))
-      archiveFileName='CGC_full_ova'
+      archiveBaseName='CGC_full_ova'
 }
 
