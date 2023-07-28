@@ -13,7 +13,7 @@ pipeline {
                              sh './gradlew build --no-daemon'
                              sh './gradlew build2 --no-daemon'
 
-                             archiveArtifacts artifacts: 'church_website/CGC.zip'
+                             archiveArtifacts artifacts: '/CGC.zip'
 
       }
 
