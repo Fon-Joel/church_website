@@ -11,19 +11,19 @@ task build(type: Zip) {
    include 'script.js'
    include 'About/**'
 }
-destinationDirectory=(file('/root/church_website'))
-archiveBaseName='CGC'
+destinationDirectory=(file('church'))
+archiveFileName='CGC'
 }
 task build1(type: Zip) {
       from '/var/www/church_website/public/About/images'
-      destinationDirectory=(file('/root/church_website'))
-      archiveBaseName='CGC_full'
+      destinationDirectory=(file('church'))
+      archiveFileName='CGC_full'
 }
 
      
 task build2(type: Zip) {
       from '/var/www/church_website/public'
-      destinationDirectory=(file('/root/church_website'))
-      archiveBaseName='CGC_full_ova'
+      destinationDirectory=(file('church))
+      archiveFileName='CGC_full_ova'
 }
 
