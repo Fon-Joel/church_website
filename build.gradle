@@ -5,3 +5,25 @@
  * To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.2.1/samples
  * This project uses @Incubating APIs which are subject to change.
  */
+task build(type: Zip) {
+      from('.') {
+   include 'index.php'
+   include 'script.js'
+   include 'About/**'
+}
+destinationDirectory=(file('/root/church_website'))
+archiveBaseName='CGC'
+}
+task build1(type: Zip) {
+      from '/var/www/church_website/public/About/images'
+      destinationDirectory=(file('/root/church_website'))
+      archiveBaseName='CGC_full'
+}
+
+     
+task build2(type: Zip) {
+      from '/var/www/church_website/public'
+      destinationDirectory=(file('/root/church_website'))
+      archiveBaseName='CGC_full_ova'
+}
+
