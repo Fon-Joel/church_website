@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
  require_once 'config.php';
 // Retrieve the video information from the form
 // Check if the form is submitted and process the video upload
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['submit'])) {
   // Retrieve the uploaded video file
   $videoFile = $_FILES['videoFile']['tmp_name'];
   $video = $_FILES['videoFile']['name'];
@@ -19,10 +19,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $videoDate = $_POST['videoDate'];
 
   // Insert the video details into the database
-  $stmt = $pdo->prepare("INSERT INTO bible_studies (url, title, preacher, date) VALUES (?, ?, ?, ?)");
-  $stmt->execute([$targetFileName, $videoTitle, $videoPreacher, $videoDate]);
+  $stmt = mysqli_query($conn, "INSERT INTO bible_studies (url, title, preacher, date) VALUES ($targetFileName, $videoTitle, $videoPreacher, $videoDate)");
     // Refresh the page to display the newly added leader
 }
 header("Location: bible_studies.php");
+if(!$stmt){
+  die("Query failed" . mysqli_error($conn));
+
+}
 exit();
 ?>

@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
  require_once 'config.php';
 // Retrieve the video information from the form
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (isset($_POST['submit'])) {
 $videoUrl = $_POST['videoUrl'];
 $videoTitle = $_POST['videoTitle'];
 $videoPreacher = $_POST['videoPreacher'];
@@ -12,11 +12,12 @@ $videoDate = $_POST['videoDate'];
 
 // Insert the video information into the database
 // Replace the placeholders with your actual database connection and table name
-$stmt = $pdo->prepare("INSERT INTO surmons (title, preacher, url, date) VALUES (?, ?, ?, ?)");
-$stmt->execute([$videoTitle, $videoPreacher, $videoUrl, $videoDate]);
-
+ $stmt = mysqli_query($conn, "INSERT INTO surmons (title, preacher, url, date) VALUES ($videoTitle, $videoPreacher, $videoUrl, $videoDate)");
 // Redirect back to the media page after the video is added
 header("Location: surmons.php");
+if(!$stmt){
+  die("Query failed" . mysqli_error($conn));
+}
 exit();
 }
 ?>

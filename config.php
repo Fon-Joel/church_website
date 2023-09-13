@@ -1,15 +1,17 @@
 <?php
 // Database configuration
-$servername = "localhost";
-$username = "fjoel";
-$password = "school1";
-$database = "leaders";
+$db['servername']= "localhost";
+$db['username'] = "fjoel";
+$db['password'] = "school1";
+$db['database'] = "leaders";
 
 // Create the database connection
-try {
-    $pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-    exit;
+foreach($db as $key => $value){
+define(strtoupper($key), $value);
 }
+$conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE);
+if(!$conn){
+    die("connecion failed". mysqli_error($conn));
+
+}
+?>

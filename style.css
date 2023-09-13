@@ -1,14 +1,14 @@
-.navbar {
+.nav-bar {
     background:linear-gradient(to right, purple 30%, rgb(179, 179, 173));
-    color:yellow;
+    color:yellow !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    top:0;
-    left:0;
+    top:0 !important;
+    left:0 !important;
     width:100%;
-    position:fixed;
+    position:fixed !important;
     z-index:3;
   }
   .menu-items a.active{
@@ -18,7 +18,7 @@
   
    /* Media query for screens wider than a certain width (e.g., phones) */
    @media (max-width: 767px) {
-    .navbar-brand {
+    .nav-bar-brand {
         display: flex;
         align-items: center;
       }
@@ -27,7 +27,7 @@
         border-bottom-right-radius: 50%;
         bottom:0;
         background:yellow;
-        background-image: url("chariots-logo.png");
+        background-image: url("/assets/chariots-logo.png");
         top:0;
         left:0;
         position:absolute;
@@ -49,7 +49,7 @@
       
     .menu-items{
       display:none;
-      background:linear-gradient(to top, purple 40%, rgb(142, 138, 138));
+      background:linear-gradient(to top, purple 40%, rgb(142, 138, 138)) !important;
      
     
     }
@@ -70,30 +70,30 @@
         color:red;
         font-style: italic;
       }
-      .dropdown{
+      .drop-down{
         display:inline-block;
         position:relative;
       }
-    .dropdown-menu-toggle {
+    .drop-down-menu-toggle {
       align-items: center;
       display:absolute;
     }
     
-    .dropdown-toggle-icon {
+    .drop-down-toggle-icon {
       margin-right: 5vw;
       cursor: pointer;
       padding-right:2vw;
       color:yellow;
     }
     
-    .dropdown-menu li {
+    .drop-down-menu li {
         margin-bottom: 0.1vw;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding:1vw;
       }
-      .dropdown-menu {
+      .drop-down-menu {
         display: none;
         position: absolute;
         padding: 0;
@@ -101,13 +101,13 @@
         width: max-content; /* Adjust the width as needed */
         top:30%;
         right:100%;
-        z-index: 1;
+        z-index: 3;
       }
-      .dropdown:hover .dropdown-menu {
+      .drop-down:hover .drop-down-menu {
         display: block;
         background:linear-gradient(to top, purple 50%, rgb(179, 179, 173));
       }  
-      .dropdown-toggle::after {
+      .drop-down-toggle::after {
         content: "\25BE"; /* Unicode down arrow character */
         margin-left: 0.2vw;}
         .menu-items.open {
@@ -126,7 +126,7 @@
 
    /* Media query for screens wider than a certain width (e.g., tablets and desktops) */
   @media (min-width: 768px) {
-    .navbar-brand {
+    .nav-bar-brand {
         display: flex;
         align-items: center;
       }
@@ -135,7 +135,7 @@
         border-bottom-right-radius: 50%;
         bottom:0;
         background:yellow;
-        background-image:center, url('chariots-logo.png');
+        background-image:center, url('/assets/chariots-logo.png');
         top:0;
         left:0;
         position:absolute;
@@ -155,37 +155,42 @@
         font-size:x-large;
       }
       
-    .dropdown-menu-toggle {
+    .drop-down-menu-toggle {
       display: none;
     }
-    .dropdown {
+    .drop-down-toggle{
+      cursor: pointer;
+    }
+    .drop-down {
         position:relative;
       }
       
-      .dropdown-toggle::after {
+      .drop-down-toggle::after {
         content: "\25BE"; /* Unicode down arrow character */
         margin-left: 0.5vw;
       }
 
-    .dropdown-menu {
+    .drop-down-menu {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
         background-color: #333;
         padding: 1vw;
-        max-height: 2.8em; /* Adjust the max-height as needed */
+        max-height: fit-content; /* Adjust the max-height as needed */
         overflow: hidden;
       }
-      .dropdown:hover .dropdown-menu {
+      .drop-down:hover .drop-down-menu{
         display: block;
-        background:linear-gradient(to right, purple 50%, rgb(179, 179, 173));
-      }  
-      .dropdown-menu li {
-        margin-bottom: 0.05vw;
+        background:linear-gradient(to top, purple 50%, rgb(179, 179, 173));
+      }
+     
+      .drop-down-menu li {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        border-bottom: 0.5px solid yellow;
+
       }
       .menu-items a:hover {
         color: red;
@@ -212,44 +217,6 @@
         color:yellow;
         text-decoration: none;
       }
+      
      
  }
- .admin-form{
- position:absolute;
- top:50%;
- left:50%;
- transform:translate(-50%, -50%);
- display:flex;
- padding:10px;
- background:rgb(0,70,120);
- width:80%;
- height:80%;
- text-align:center;
- flex-direction:column;
-}
-.admin-form h2{
-color:yellow;
-font-size:80px;
-}
-.admin-form form{
-height:80%;
-align-items:center;
-justify-content:center;
-
-}
-
-.admin-form input{
-border-radius:20%;
-font:;
-}
-.admin-form label{
-color:yellow;
-} 
-.admin-form p{
-color:red;
-}
-
-
-
- 
-  

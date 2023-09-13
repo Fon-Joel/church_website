@@ -57,7 +57,7 @@ color: green;
   padding:5px;
 }
 .contact-container{
-diplay:flex;
+display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;

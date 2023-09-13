@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var dropdownToggle = document.querySelector(".dropdown-toggle-icon");
+    document.addEventListener("DOMContentLoaded", function() {
+    var dropdownToggle = document.querySelector(".drop-down-toggle-icon");
     var menuItems = document.querySelector(".menu-items");
   
     dropdownToggle.addEventListener("click", function() {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
   });
   document.addEventListener("DOMContentLoaded", function() {
-    var currentPage = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    var currentPage = location.pathname;
     var links = document.querySelectorAll("nav a");
     
     links.forEach(function(link) {
@@ -18,8 +18,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
   });
-  
-  
- 
- 
-

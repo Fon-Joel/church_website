@@ -2,14 +2,17 @@
 
 <?php
 require_once 'config.php';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $leaderId = $_POST['id'];
+if (isset($_POST['submit'])) {
+  $value= $_POST['id'];
 
   // Prepare and execute the DELETE query
-  $stmt = $pdo->prepare("DELETE FROM bible_studies WHERE id = ?");
-  $stmt->execute([$leaderId]);
+  $stmt = mysqli_query($conn, "DELETE FROM bible_studies WHERE id = $value");
 
   // Redirect back to the about page after removal
   header("Location: bible_studies.php");
+  if(!$stmt){
+    die("Query failed" . mysqli_error($conn));
+
+  }
   exit();
 }

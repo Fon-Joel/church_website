@@ -4,16 +4,6 @@ body {
   padding: 0;
 }
 /* Footer styles */
-  footer {
-    background:linear-gradient(to right, purple 50%, rgb(179, 179, 173));
-    padding: 10px;
-    color:yellow;
-    text-align: center;
-    display:flex;
-    width:100%;
-    flex-direction:column;
-    margin-top: 20px;
-  }
   .search-bar{
   display:flex;
   justify-content:space-between;

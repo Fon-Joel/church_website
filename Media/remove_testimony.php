@@ -2,14 +2,16 @@
 
 <?php
 require_once 'config.php';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $leaderId = $_POST['id'];
+if (isset($_POST['submit'])) {
+  $value= $_POST['id'];
 
   // Prepare and execute the DELETE query
-  $stmt = $pdo->prepare("DELETE FROM testimony WHERE id = ?");
-  $stmt->execute([$leaderId]);
-
+  $query = ($conn, "DELETE FROM testimony WHERE id = $value");
   // Redirect back to the about page after removal
   header("Location: testimony.php");
+   if (!$query){
+    die("Query failed" . mysqli_error($conn));
+  }
   exit();
 }
+?>
