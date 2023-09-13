@@ -1,6 +1,6 @@
 <?php
 // Database configuration
-$db['servername']= "localhost";
+$db['servername']= "100.26.181.56";
 $db['username'] = "fjoel";
 $db['password'] = "school1";
 $db['database'] = "leaders";
